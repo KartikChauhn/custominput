@@ -15,6 +15,9 @@ function App() {
     if (chipsWrapper.current) {
       chipsWrapper.current.scrollLeft = chipsWrapper.current.scrollWidth;
     }
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   }, [selectedItems]);
 
   const updateFilteredItems = () => {
