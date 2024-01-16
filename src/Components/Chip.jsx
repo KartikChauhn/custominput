@@ -6,6 +6,7 @@ const Chip = ({
   handleItemClick,
   isSelected,
   handleChipRemove,
+  highlight,
 }) => {
   return (
     <div
@@ -15,7 +16,9 @@ const Chip = ({
       }}
       className={`${
         isSelected ? " rounded-full bg-slate-200" : "cursor-pointer"
-      } flex gap-2 items-center p-2 `}
+      } flex gap-2 items-center p-2 transition-all ${
+        highlight && " bg-red-200"
+      } `}
     >
       <div className="rounded-full bg-green-700 w-[2rem] h-[2rem] flex justify-center items-center">
         {" "}
