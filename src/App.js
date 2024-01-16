@@ -49,14 +49,12 @@ function App() {
   const handleBackSpace = (e) => {
     if (e.key === "Backspace") {
       if (selectedItems.length > 0 && !inputValue) {
-        console.log("back space presssssssssssssssssssssssss");
         if (backSpaceCount === 0) {
           setBackspaceCount(1);
         } else {
           handleChipRemove(selectedItems[selectedItems.length - 1]);
           setBackspaceCount(0);
         }
-        console.log(inputValue, "Backspace key pressed");
       }
     }
   };
